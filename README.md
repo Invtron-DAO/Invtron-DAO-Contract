@@ -1,4 +1,4 @@
-# Invtron4 Smart Contract
+# Invtron Smart Contract
 
 ### Table of Contents
 1. Introduction
@@ -12,12 +12,12 @@
 9. License
 
 ## Introduction
-Invtron4 is an ERC20 token contract with extended functionality for user voting, CEO applications, funding request management, and user registration. It integrates traditional tokenomics with governance mechanisms to foster a decentralized platform for managing various roles and funding requests within the ecosystem.
+Invtron is an ERC20 token contract with extended functionality for user voting, CEO applications, funding request management, and user registration. It integrates traditional tokenomics with governance mechanisms to foster a decentralized platform for managing various roles and funding requests within the ecosystem.
 
 ### Token Details:
-- **Token Name**: Invtron4
-- **Token Symbol**: INV4
-- **Total Supply**: 1,000,000,000 INV4
+- **Token Name**: INV
+- **Token Symbol**: INV
+- **Total Supply**: 1,000,000,000 INV
 
 ## Features
 - **ERC20 Token**: Standard fungible token compliant with the ERC20 specification.
@@ -27,7 +27,7 @@ Invtron4 is an ERC20 token contract with extended functionality for user voting,
 - **User Registration**: Functionality to register users, enhancing participation transparency.
 
 ## Contract Inheritance and Dependencies
-The `Invtron4` smart contract inherits and utilizes multiple contracts from OpenZeppelin and custom imports. Below is an overview of all the inherited contracts:
+The `Invtron` smart contract inherits and utilizes multiple contracts from OpenZeppelin and custom imports. Below is an overview of all the inherited contracts:
 
 1. **ERC20** (OpenZeppelin): Base for the ERC20 token standard functionality.
 2. **Ownable** (OpenZeppelin): Allows control of ownership to manage permissions effectively.
@@ -38,13 +38,13 @@ The `Invtron4` smart contract inherits and utilizes multiple contracts from Open
 7. **CeoRegistration** (Custom): Adds the functionality for CEO application and registration.
 
 ## Tokenomics
-The Invtron4 token contract was deployed with the following tokenomics:
+The Invtron token contract was deployed with the following tokenomics:
 - **Initial Total Supply**: 1,000,000,000 INV4.
 - **Reserve Allocation**: 10% of the total supply (100,000,000 INV4) is reserved for the contract to be used for project and ecosystem development.
 - **Decimals**: Uses the standard ERC20 decimals function for 18 decimals.
 
 ## Voting Mechanism
-The Invtron4 contract incorporates a voting mechanism for the endorsement of applicants and funding requests. The voting system is based on the following:
+The Invtron contract incorporates a voting mechanism for the endorsement of applicants and funding requests. The voting system is based on the following:
 
 - **Voting Duration**: 72 hours from the time of creation.
 - **Voting Power Calculation**: Voting power is based on the difference between the initial balance and outgoing tokens sent by the voter.
@@ -54,7 +54,7 @@ The Invtron4 contract incorporates a voting mechanism for the endorsement of app
 The `calculateVotingPower` function calculates the voting power for a user based on their initial token balance minus the total outgoing tokens sent within the defined lookback period. This method helps prevent vote manipulation by limiting frequent transfers during active voting.
 
 ## Sub-Contracts Overview
-The Invtron4 contract relies on several sub-contracts, each providing specific functionality:
+The Invtron contract relies on several sub-contracts, each providing specific functionality:
 
 ### 1. CeoRegistration.sol
 This contract manages CEO applications and registrations.
@@ -94,7 +94,7 @@ This contract manages user registration.
   - `getAllUsers`: Returns all registered users and their addresses.
 
 ## Functions Overview
-### Core Functions in Invtron4
+### Core Functions in Invtron
 1. **Constructor**: 
    Initializes the contract with the token name, symbol, and total supply. Allocates 10% of the supply to the contract itself for developmental purposes.
 
